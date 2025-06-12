@@ -45,7 +45,7 @@
             </div>
             <div class="call-to-action-2">
                 <h2>Déjà membre ? C'est par ici !</h2>
-                <a href="#" class="btn">Se connecter</a>
+                <a href="#" class="btn" onclick="openModal()">Se connecter</a>
             </div>
         </div>
     </section>
@@ -126,7 +126,15 @@
                 <p style="font-style: italic;">Recherche rapide et précise</p>
             </div>
         </div>
-
     </section>
+    <div id="modal">
+        <div id="modal-content">
+          <h3>Connexion</h3>
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Mot de passe">
+          <button onclick="closeModal()">Se connecter</button>
+        </div>
+    </div>
+    <script src="../../../static/js/acceuil.js"></script>
 </body>
 </html>

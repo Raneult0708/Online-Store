@@ -21,7 +21,7 @@
             <a href="#" class="btn ask-ride">Demander un trajet</a>
         </div>
         <div class="header-3">
-            <a href="#" class="btn connect">Connexion</a>
+            <a href="#" class="btn connect" onclick="openModal()">Connexion</a>
             <a href="#" class="btn sign-up">Inscription</a>
         </div>
     </header>
@@ -77,5 +77,28 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal">
+        <div id="modal-content">
+          <h3>Connexion</h3>
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Mot de passe">
+          <button onclick="closeModal()">Se connecter</button>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

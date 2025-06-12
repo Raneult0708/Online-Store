@@ -186,3 +186,33 @@ footer img {
 .footer-2 a:hover {
     color: rgb(45, 155, 255);
 }
+#modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+#modal-content input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#modal-content button {
+  width: 100%;
+  padding: 10px;
+  background: #0099ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
