@@ -1,0 +1,53 @@
+# Environnements virtuels
+env/
+venv/
+.venv/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+
+# Fichiers de log
+*.log
+
+# Base de données SQLite locale
+*.sqlite3
+*.db
+
+# Configurations locales / éditeurs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Fichiers de tests ou coverage
+.coverage
+.tox/
+.nox/
+.cache/
+pytest_cache/
+htmlcov/
+
+# Fichiers générés
+*.egg-info/
+dist/
+build/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Secrets (à adapter)
+.env
+.env.*
+
+# Autres fichiers inutiles
+*.~undo-tree~
