@@ -1,10 +1,11 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/css/base.css">
+    <title>{% block title %}Comotorage{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
             <p style="font-style: italic;">Le covoiturage qui unit les étudiants d'IFRI sur tous leurs déplacements quotidiens</p>
         </div>
         <div class="header-2">
-            <a href="#" class="btn accueil">Accueil</a>
+            <a href="{% url 'accueil' %}" class="btn accueil">Accueil</a>
             <a href="#" class="btn profil">Profil</a>
             <a href="#" class="btn messages">Messages</a>
             <a href="#" class="btn search-ride">Rechercher un trajet</a>
@@ -25,6 +26,9 @@
             <a href="#" class="btn sign-up">Inscription</a>
         </div>
     </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
     <footer class="target section-3s">
         <div class="footer-container">
             <div class="footer-1">
@@ -34,11 +38,11 @@
                         Aujourd'hui, utilisez celle qui va changer vos trajets !
                     </p>
                     <div class="social-icons">
-                        <a href="#"><img src="../static/images/facebook.png" alt=""></a>
-                        <a href="#"><img src="../static/images/instagram.png" alt=""></a>
-                        <a href="#"><img src="../static/images/linkedin.png" alt=""></a>
-                        <a href="#"><img src="../static/images/twitter.png" alt=""></a>
-                        <a href="#"><img src="../static/images/youtube.png" alt=""></a>
+                        <a href="#"><img src="{% static 'images/facebook.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'images/linkedin.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'images/twitter.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'images/youtube.png' %}" alt=""></a>
                     </div>
                 </div>
                 <div class="footer-1-2">

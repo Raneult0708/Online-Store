@@ -1,20 +1,23 @@
+{% load static %}
+{% extends 'comotorage/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../../static/css/acceuil.css">
+    <title>{% block title %}Accueil - Comotorage{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/acceuil.css' %}">
 </head>
+{% block content %}
 <body>
     <section class="carrousel">
         <div class="carrousel-images">
-            <img src="../../../static/images/photo_login-QS5V_6W4.png" alt=""  class="slide">
-            <img src="../../../static/images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif" alt=""  class="slide">
-            <img src="../../../static/images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif" alt=""  class="slide">
-            <img src="../../../static/images/photo_login-QS5V_6W4.png" alt=""  class="slide">
-            <img src="../../../static/images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif" alt=""  class="slide">
-            <img src="../../../static/images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif" alt=""  class="slide">
+            <img src="{% static 'images/photo_login-QS5V_6W4.png'%}" alt=""  class="slide">
+            <img src="{% static 'images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif' %}" alt=""  class="slide">
+            <img src="{% static 'images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif' %}" alt=""  class="slide">
+            <img src="{% static 'images/photo_login-QS5V_6W4.png'%}" alt=""  class="slide">
+            <img src="{% static 'images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif' %}" alt=""  class="slide">
+            <img src="{% static 'images/etudiants-qui-etudient-ensemble-coup-moyen_23-2148913227.avif' %}" alt=""  class="slide">
         </div>
     </section>
     <section class="welcome-section">
@@ -135,6 +138,7 @@
           <button onclick="closeModal()">Se connecter</button>
         </div>
     </div>
-    <script src="../../../static/js/acceuil.js"></script>
+    <script src="{static 'js/acceuil.js' %}"></script>
+    {% endblock %}
 </body>
 </html>
