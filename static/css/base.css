@@ -126,7 +126,6 @@ footer {
     background-color: var(--green-pastel);
     bottom: 0;
     padding: 1rem;
-    position: absolute;
 }
 
 footer img {

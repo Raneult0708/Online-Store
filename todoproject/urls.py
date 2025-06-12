@@ -17,8 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
 
 urlpatterns = [
+    path('', lambda request: redirect('accueil')),  # 👈 redirige '/' vers la vue 'accueil'
+
+
     path("admin/", admin.site.urls),
     path('', include('todo_list.urls')), 
+    
 ]

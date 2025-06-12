@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def accueil(request):
-    return render(request, 'comotorage/accueil.html')
+    return render(request, 'accueil.html')

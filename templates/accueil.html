@@ -1,12 +1,14 @@
+{% extends 'base.html' %} 
 {% load static %}
-{% extends 'comotorage/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Accueil - Comotorage{% endblock %}</title>
+    {% block css %}
     <link rel="stylesheet" href="{% static 'css/acceuil.css' %}">
+    {% endblock %}
 </head>
 {% block content %}
 <body>
@@ -138,7 +140,7 @@
           <button onclick="closeModal()">Se connecter</button>
         </div>
     </div>
-    <script src="{static 'js/acceuil.js' %}"></script>
     {% endblock %}
+    <script src="{% static 'js/acceuil.js' %}"></script>
 </body>
 </html>
