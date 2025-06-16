@@ -30,7 +30,6 @@ function publishPost1() {
   }
 
   textareas.forEach(t => t.value = "");
-  closePubSpace1();
 }
 document.querySelector('.connect').style.display = 'none';
 document.querySelector('.sign-up').style.display = 'none';
