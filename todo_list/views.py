@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import Utilisateur
 
 # Create your views here.
 def accueil(request):
@@ -6,6 +7,12 @@ def accueil(request):
 def profil(request):
     return render(request, 'profil.html')
 def sign_up(request):
+    if request.method == 'POST' :
+        utilisateur = Utilisateur()
+        utilisateur.nom = request.POST.get('nom')
+        utilisateur.save()
+        return render(request, 'profil.html')
+
     return render(request, 'sign_up.html')
 def publish_ride(request):
     return render(request, 'publish_ride.html')
@@ -234,3 +241,7 @@ def rechercher_utilisateur(request):
             return JsonResponse({'error': 'Données JSON invalides'}, status=400)
     
     return JsonResponse({'error': 'Méthode non autorisée'}, status=405)
+
+
+def junio(request):
+    return render(request, "sign.html")
