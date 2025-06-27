@@ -1,49 +1,40 @@
-# todoproject
+# Mega Sonk in MegaRust
 
-# SETUP LOCAL
+To run the game:
 
-# LINUX
-# Clone le projet
-git clone https://github.com/Raneult0708/todoproject.git
-cd PIL1_2425_1
+```
+mame genesis -cart sonk.md
+```
 
-# Créer un environnement virtuel
-python3 -m venv env 
-source env/bin/activate
+Record your solution and send it up to the server to get the flag! Make sure your recording is at most 5 minutes long.
 
-# Installer les dépendances
-pip install -r requirements.txt
+```
+mame genesis -cart sonk.md -record solution.inp
+python3 submit.py /home/user/.mame/inp/solution.inp mega.2025.ctfcompetition.com 1337
+```
 
-# Preparation du fichier .env
-Créer un fichier .env selon le format du fichier env.example en suivant les instructions qu'il contient
+To rebuild the game:
 
-# Lancer le serveur
-python manage.py runserver
+```
+make sonk.md
+```
 
+On the first run this builds the compilation toolchain which could take up to half an hour.
 
-# WINDOWS
+Rebuild and run the game:
 
-# Clone le projet
-git clone https://github.com/Raneult0708/todoproject.git
-cd PIL1_2425_1
-
-# Créer un environnement virtuel
-python -m venv env 
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-.\env\Scripts\Activate.ps1
+```
+ make run
+```
 
 
-# Installer les dépendances
-pip install -r requirements.txt
+## Credits
 
-# Preparation du fichier .env
-Créer un fichier .env selon le format du fichier env.example en suivant les instructions qu'il contient
+Compilation toolchain based on
+* https://github.com/ricky26/rust-mega-drive
+* https://github.com/rust-lang/rustc_codegen_gcc
 
-# Lancer le serveur
-python manage.py runserver
-
-# Requète de création de votre base de données
-CREATE DATABASE tododb;
-CREATE USER 'todo_user'@'localhost' IDENTIFIED BY 'motdepassefort';
-GRANT ALL PRIVILEGES ON tododb.* TO 'todo_user'@'localhost';
-FLUSH PRIVILEGES;
+Graphics credits:
+* https://opengameart.org/content/dashie-supertux-advance-style
+* https://opengameart.org/content/plastic-shamtastic
+* https://opengameart.org/content/wasp-0
